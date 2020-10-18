@@ -37,4 +37,21 @@ public class MapController {
             return new ResponseEntity<>(new Response(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @RequestMapping(value = "/generate-big", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+    public ResponseEntity<Map> generateMap(@RequestParam int size, @RequestParam boolean hasMom) {
+        Map map = mapService.generateBigMap(size, hasMom);
+        return new ResponseEntity<>(map, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/check-big", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Response> checkBig(@RequestBody Map map) {
+        try {
+            Response response = mapService.checkUserPathForBigMap(map, map.getUserPoints(), map.getUsername());
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(new Response(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }

@@ -10,4 +10,9 @@ public interface MapService {
     Map generateMap(int size);
 
     Response checkUserPath(Map map, List<int[]> userPoints, String username);
+
+    Map generateBigMap(int size, boolean hasMom);
+
+    Response checkUserPathForBigMap(Map map, List<int[]> userPoints, String username);
+
 }
