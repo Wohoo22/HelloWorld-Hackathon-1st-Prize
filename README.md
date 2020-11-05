@@ -1,6 +1,6 @@
 # HelloWorld-Hackathon-1st-Prize
-A project that earned the 1st prize at MindX Grand Hackathon 2020.
-This is the back-end code, check out front-end code written in ReactJs here: https://github.com/Wohoo22/HelloWorld-Hackathon-1st-Prize-FrontEnd
+A project that achieved the 1st prize at MindX Grand Hackathon 2020.
+This is the back-end codes, check out front-end codes written in ReactJs here: https://github.com/Wohoo22/HelloWorld-Hackathon-1st-Prize-FrontEnd
 This project uses ReactJs, Spring Boot, MongoDB, Docker.
 
 # Funtion
